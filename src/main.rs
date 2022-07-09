@@ -8,7 +8,7 @@ fn panic(_info: &PanicInfo) -> ! {
     loop {}
 }
 
-#[no_mangle]
+#[no_mangle] // disable name mangling to make sure the func name after compiled remains exactly `_start`
 pub extern "C" fn _start() -> ! {
     loop {}
 }
